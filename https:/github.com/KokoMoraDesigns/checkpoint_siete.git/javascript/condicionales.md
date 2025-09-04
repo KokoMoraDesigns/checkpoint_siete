@@ -40,11 +40,11 @@ nombre_del_proyecto = 'abrir mi librería'
 
 function buenosDias() {
     if porcentaje < 50 {
-        return 'buenos días {nombre}, ahora mismo nos queda trabajo por hacer (tenemos un {porcentaje}%), ¡mucho ánimo para reunir ese dinero!'
+        return `buenos días ${nombre}, ahora mismo nos queda trabajo por hacer (tenemos un ${porcentaje}%), ¡mucho ánimo para reunir ese dinero!´
     } else if porcentaje >= 50 < 100 {
-        return 'buenos días {nombre}, ¡muy bien! Ya hemos cumplido un {porcentaje}% de nuestro objetivo, sigue así, ya estamos casi, casi en la meta.'
+        return `buenos días ${nombre}, ¡muy bien! Ya hemos cumplido un ${porcentaje}% de nuestro objetivo, sigue así, ya estamos casi, casi en la meta.
     } else {
-        return 'buenos días {nombre}, ¡¡enhorabuena!! Ya no necesitas mi ayuda para {nombre_del_proyecto}, disfrútalo mucho.'
+        return ,`buenos días ${nombre}, ¡¡enhorabuena!! Ya no necesitas mi ayuda para {nombre_del_proyecto}, disfrútalo mucho.´
     }
 }
         
