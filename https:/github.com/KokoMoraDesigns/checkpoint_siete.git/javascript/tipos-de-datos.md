@@ -61,7 +61,9 @@ Esto también funciona a la inversa, si queremos escribir un decimal muy pequeñ
 {% endtab %}
 
 {% tab title="Cadena" %}
-Equivale a una **cadena de caracteres**, y debemos posicionarla entrecomillada, bien sea con las <mark style="background-color:$info;">comillas simples</mark> ( 'hola' ) o con las <mark style="background-color:$info;">comillas dobles</mark> ( "hola" ). Además, tenemos una tercera opción (denominada como _funcionalidad extendida_) que consiste en posicionar una cadena entre <mark style="background-color:$info;">comillas invertidas</mark> para poder incrustar en ella alguna variable o expresión. Por ejemplo:
+Equivale a una **cadena de caracteres**, y debemos posicionarla entrecomillada, bien sea con las <mark style="background-color:$info;">comillas simples</mark> ( 'hola' ) o con las <mark style="background-color:$info;">comillas dobles</mark> ( "hola" ). Además, tenemos una tercera opción (denominada como _funcionalidad extendida_) que consiste en posicionar una cadena entre <mark style="background-color:$info;">comillas invertidas</mark> para poder incrustar en ella alguna variable o expresión.&#x20;
+
+Por ejemplo:
 
 ```
 let olor = 'vainilla' --> comilla simple para almacenar una cadena en una variable.
@@ -88,6 +90,10 @@ Otra solución (más fácilmente legible) sería utilizar comillas dentro de la 
 console.log (" ...y me dijo 'pues no vienes a casa', ¿te lo puedes creer?")
 ```
 {% endhint %}
+
+{% content-ref url="funciones-de-las-cadenas.md" %}
+[funciones-de-las-cadenas.md](funciones-de-las-cadenas.md)
+{% endcontent-ref %}
 {% endtab %}
 
 {% tab title="Booleano" %}
