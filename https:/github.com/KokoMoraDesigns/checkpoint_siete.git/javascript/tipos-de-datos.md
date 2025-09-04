@@ -102,7 +102,7 @@ Debido a su esencia, el booleano es un tipo de datos no solo útil, sino impresc
 ```
 let nombre = 'Mónica'
 
-if nombre !== 'Mónica' {
+if (nombre !== 'Mónica') {
     return 'no eres la persona con la que quería hablar'
 } 
 ```
@@ -117,12 +117,26 @@ El valor nulo representa un campo que está vacío o tiene un valor desconocido.
 let edad = null;
 ```
 
+
+
 Otro caso aparentemente similar (al no devolvernos ningún valor) sería el de _undefined_, salvo que este lo que nos estaría indicando es que hemos declarado una variable que no está asignada. Por ejemplo:
 
 ```
 let edad;
 console.log(edad) --> el output sería undefined
 ```
+
+O, en el ejemplo anterior:
+
+```
+let nombre = 'Mónica'
+
+if (nombre !== 'Mónica') {
+    return 'no eres la persona con la que quería hablar'
+} 
+```
+
+En que establecimos un código a ejecutar si se daba un caso, pero no le dijimos cómo actuar en el caso contrario (si el nombre efectivamente era Mónica), el output de esta operación sería 'undefined'.
 {% endtab %}
 {% endtabs %}
 
