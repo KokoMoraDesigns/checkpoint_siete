@@ -44,3 +44,13 @@ Algunos **operadores** que podemos utilizar para trabajar con números son la su
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+'Únicamente' se pueden representar con precisión mediante _números_ los que se encuentren entre el rango -(2<sup>53</sup>-1) y (2<sup>53</sup>-1); es decir, si introducimos 9007199254740991 (el equivalente a (2<sup>53</sup>-1) ) + 1, tendremos como resultado 9007199254740992, y si introducimos 9007199254740991 + 2, también tendremos como resultado 9007199254740992.&#x20;
+
+Si estamos trabajando en un ámbito que precise la utilización de números mayores o menores que el indicado, deberemos trabajar con otro tipo de datos numérico: **BigInt**.&#x20;
+
+¿Y cómo le explicamos al sistema que estamos trabajando con BigInt? Añadiendo una 'n' al final del número, por ejemplo:
+
+9007199254740992548769458654096504945n.
+{% endhint %}
+
