@@ -8,7 +8,7 @@ Las tres funciones principales de las cadenas de JavaScript son concatenar, camb
 
 <details>
 
-<summary>Concatenar</summary>
+<summary>Concatenar varias cadenas</summary>
 
 Es decir, unir varias cadenas para crear una nueva. Además de con la función, vamos a ver varias maneras de hacerlo:
 
@@ -101,7 +101,7 @@ Esta función resulta muy adecuada, por ejemplo, cuando hemos requerido que una 
 ```
 let contraseña = 'mi contraseña';
 
-console.log(contraseña.length()) --> output --> 12
+console.log(contraseña.length()); --> output --> 12
 ```
 
 </details>
@@ -115,18 +115,36 @@ La función charAt() nos permite saber qué carácter se encuentra en determinad
 <figure><img src="https://media.geeksforgeeks.org/wp-content/uploads/20230906124433/Screenshot-(354).png" alt=""><figcaption></figcaption></figure>
 
 ```
-let cadena = 'geeksforgeeks'
+let cadena = 'geeksforgeeks';
 
-console.log(cadena.indexOf('s')) --> output --> 4
+console.log(cadena.indexOf('s')); --> output --> 4
 
-console.log(cadena.charAt(5)) --> output --> f
+console.log(cadena.charAt(5)); --> output --> f
 
 También podemos acceder a la 'f' de la siguiente manera:
-console.log(cadena[5])
+console.log(cadena[5]);
 ```
 
 {% hint style="info" %}
 Si el carácter que estamos buscando aparece varias veces en la cadena, JavaScript nos informará exclusivamente sobre el primero que aparezca.
+{% endhint %}
+
+</details>
+
+<details>
+
+<summary>Dividir una cadena</summary>
+
+La función _split_ nos permite separar una cadena en función al separador que le indiquemos. Por ejemplo:
+
+```
+let cadena = 'perrosygatosypájarosypecesycosasymáscosas';
+let cadenaSeparada = cadena.split('y');
+    --> output --> ['perros', 'gatos', 'pájaros', 'peces', 'cosas', 'máscosas']
+```
+
+{% hint style="info" %}
+Ten presente que la función no nos devolverá una cadena, sino una colección (array) de cadenas.
 {% endhint %}
 
 </details>
