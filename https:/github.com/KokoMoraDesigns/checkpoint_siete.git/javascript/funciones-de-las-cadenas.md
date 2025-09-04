@@ -36,8 +36,8 @@ let capitulo2 = 'este es el texto de mi segundo capítulo.';
 </strong>
 También sería posible:
 
-let libro = 'Hasta ahora he escrito todo esto: ' + capitulo1 + ' ' + capitulo2;
-</code></pre>
+<strong>let libro = 'Hasta ahora he escrito todo esto: ' + capitulo1 + ' ' + capitulo2;
+</strong></code></pre>
 
 **Con las comillas invertidas:**
 
@@ -77,7 +77,7 @@ Es decir, separar (rebanar, según el nombre en inglés de la función) una cade
 ```
 let saludo = 'hello';
 
-let rebanada = saludo.slice(2,4);
+let rebanada = saludo.slice(2,5);
   --> introducimos el índice inicial y el índice final con que nos queremos quedar.
   --> rebanada = 'llo'
 ```
@@ -101,7 +101,7 @@ Esta función resulta muy adecuada, por ejemplo, cuando hemos requerido que una 
 ```
 let contraseña = 'mi contraseña';
 
-console.log(contraseña.length()); --> output --> 12
+console.log(contraseña.length); --> output --> 13
 ```
 
 </details>
@@ -144,7 +144,7 @@ let cadenaSeparada = cadena.split('y');
 ```
 
 {% hint style="info" %}
-Ten presente que la función no nos devolverá una cadena, sino una colección (array) de cadenas.
+Ten presente que la función no nos devolverá una cadena, sino una colección (object array) de cadenas.
 {% endhint %}
 
 </details>
