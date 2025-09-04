@@ -10,7 +10,7 @@ description: >-
 
 {% tabs %}
 {% tab title="Declaración de función" %}
-Se dice que estamos **declarando una función** cuando la definimos:
+Se dice que estamos **declarando una función** cuando la definimos de esta manera:
 
 ```
 function nombre() {
@@ -50,6 +50,68 @@ let variable = funcion() {
 {% endtabs %}
 
 
+
+Para desarrollar las diferencias entre ambas maneras de definir las funciones, así como en qué contexto es más útil una u otra, primero es aconsejable explicar en qué orden JavaScript ejecuta el código.&#x20;
+
+Pongamos una declaración de función:
+
+```
+var clase = "4a"
+
+var media = 9
+
+function alumnado(clase, media) {
+  return `la clase ${clase} tiene una media de ${media}`
+}
+```
+
+Y ahora, una expresión de función:
+
+```
+var notaMedia = function (media) {
+  console.log(`tienen una media de ${media}`)
+}
+```
+
+{% hint style="info" %}
+Debemos tener en cuenta que JavaScript **primero declara las funciones y las variables,** y **después les asigna sus valores**, ese es el orden en que opera su sistema (lo conocemos como hoisting), con lo que, si utilizamos variables declaradas con 'var', estas se inicializarán antes (sin sus valores, es decir, en modo _undefined)._
+
+La interpretación gráfica sería:
+
+
+
+```
+En su primer recorrido por el código, declara las funciones y las variables:
+
+
+var clase;
+
+var media;
+
+function alumnado(clase, media) {
+    return `la clase ${clase} tiene una media de ${media}`
+}
+
+var notaMedia;
+
+
+
+En su segundo recorrido, les asigna los valores:
+
+clase = '4a'
+
+media = 9
+
+notaMedia = function(media) {
+    console.log(`tienen una media de ${media}`)
+```
+
+
+
+En cambio, si utilizamos variables declaradas con let o const, no se van a inicializar al principio, con lo que, si&#x20;
+{% endhint %}
+
+Como podemos ver, una misma línea de código _( var notaMedia = function (media) {  )_  se ejecuta en tiempos diferentes.
 
 La diferencia entre ambas radica, por ende, en los siguientes aspectos:
 
