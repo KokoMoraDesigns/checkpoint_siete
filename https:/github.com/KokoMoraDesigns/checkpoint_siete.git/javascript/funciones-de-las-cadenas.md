@@ -39,10 +39,94 @@ También sería posible:
 let libro = 'Hasta ahora he escrito todo esto: ' + capitulo1 + ' ' + capitulo2;
 </code></pre>
 
-**Con**&#x20;
+**Con las comillas invertidas:**
 
 ```
-// Some code
+let alimento = 'tortilla';
+let diaSemana = 'jueves';
+
+let comida = `Este ${diaSemana} me apetece mucho comer {alimento}.`;
 ```
+
+</details>
+
+<details>
+
+<summary>Cambiar el formato de la cadena</summary>
+
+Es decir, convertir una cadena a mayúsculas o a minúsculas:
+
+```
+let texto = 'este es Un texto';
+
+let textoEnMayuscula = texto.toUpperCase(); --> output: ESTE ES UN TEXTO
+
+let textoEnMinuscula = texto.toLowerCase(); --> output: este es un texto
+```
+
+</details>
+
+<details>
+
+<summary>Extraer subcadenas</summary>
+
+Es decir, separar (rebanar, según el nombre en inglés de la función) una cadena en varias:
+
+<figure><img src="https://www.javascripttutorial.net/wp-content/uploads/2022/02/JavaScript-String-slice-end-greater-than-length.svg" alt=""><figcaption></figcaption></figure>
+
+```
+let saludo = 'hello';
+
+let rebanada = saludo.slice(2,4);
+  --> introducimos el índice inicial y el índice final con que nos queremos quedar.
+  --> rebanada = 'llo'
+```
+
+
+
+{% hint style="info" %}
+Recuerda que el índice empieza en cero, es decir, el índice de 'h' equivale a 0, no a 1.
+{% endhint %}
+
+</details>
+
+Sin embargo, existen algunas más que se usan muy asiduamente, vamos a verlas:
+
+<details>
+
+<summary>Obtener la longitud de una cadena</summary>
+
+Esta función resulta muy adecuada, por ejemplo, cuando hemos requerido que una contraseña contenga un número mínimo de caracteres:
+
+```
+let contraseña = 'mi contraseña';
+
+console.log(contraseña.length()) --> output --> 12
+```
+
+</details>
+
+<details>
+
+<summary>Acceder a un carácter o a un índice</summary>
+
+La función charAt() nos permite saber qué carácter se encuentra en determinado índice, mientras que la función indexOf() nos permite saber qué índice tiene determinado carácter.
+
+<figure><img src="https://media.geeksforgeeks.org/wp-content/uploads/20230906124433/Screenshot-(354).png" alt=""><figcaption></figcaption></figure>
+
+```
+let cadena = 'geeksforgeeks'
+
+console.log(cadena.indexOf('s')) --> output --> 4
+
+console.log(cadena.charAt(5)) --> output --> f
+
+También podemos acceder a la 'f' de la siguiente manera:
+console.log(cadena[5])
+```
+
+{% hint style="info" %}
+Si el carácter que estamos buscando aparece varias veces en la cadena, JavaScript nos informará exclusivamente sobre el primero que aparezca.
+{% endhint %}
 
 </details>
