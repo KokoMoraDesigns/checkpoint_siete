@@ -40,17 +40,54 @@ Si estamos trabajando en un ámbito que precise la utilización de números mayo
 9007199254740992548769458654096504945n.
 {% endhint %}
 
+### Otras formas en que podemos escribir los números
 
+Si estamos tratando con números largos, como cinco millones, sería fácil equivocarnos con el número de ceros al escribir 5000000. No obstante, existen otras maneras en que podemos escribir este número en JavaScript:
+
+```
+let millones = 5_000_000; --> sería como escribir 5.000.000 a mano, solo que el caracter " _ ", si lo colocamos entre dígitos, JavaScript lo ignoraría
+```
+
+```
+let millones = 5e6; --> es decir, el número al principio (5), y el número de ceros que le siguen
+                       la operación que JavaScript realizaría sería la siguiente: 5 * 1000000 ( el número de ceros que le hayamos pedido )
+```
+
+Esto también funciona a la inversa, si queremos escribir un decimal muy pequeño, por ejemplo, 0.000001:
+
+```
+ let inversa = 1e-6;
+```
 {% endtab %}
 
 {% tab title="Cadena" %}
 Equivale a una **cadena de caracteres**, y debemos posicionarla entrecomillada, bien sea con las <mark style="background-color:$info;">comillas simples</mark> ( 'hola' ) o con las <mark style="background-color:$info;">comillas dobles</mark> ( "hola" ). Además, tenemos una tercera opción (denominada como _funcionalidad extendida_) que consiste en posicionar una cadena entre <mark style="background-color:$info;">comillas invertidas</mark> para poder incrustar en ella alguna variable o expresión. Por ejemplo:
 
-`let olor = 'vainilla' -->`` `_`comilla simple para almacenar una cadena en una variable.`_
+```
+let olor = 'vainilla' --> comilla simple para almacenar una cadena en una variable.
 
-``input --> console.log(`¿me compras una vela de ${olor}, porfi?`) -->``` `_`comilla invertida para que nos devuelva una frase dinámica, no rígidamente codificada.`_`   `&#x20;
 
-`output -->¿me compras una vela de vainilla, porfi?` &#x20;
+input --> console.log(`¿me compras una vela de ${olor}, porfi?`) --> comilla invertida para que nos devuelva una frase dinámica, no rígidamente codificada.
+
+output --> ¿me compras una vela de vainilla, porfi?  
+
+```
+
+{% hint style="info" %}
+Si quisiéramos, dentro de la cadena, incluir unas comillas, tendríamos que hacer uso del carácter de escape, para que el motor de JavaScript no las confundiera con las comillas operacionales. El caracter de escape es ' / ', y tenemos que colocarlo antes de la comilla que deseemos 'esconderle' al motor, por ejemplo:
+
+```
+console.log (" ...y me dijo /" pues no vienes a casa /", ¿te lo puedes creer?")
+
+output --> ...y me dijo " pues no vienes a casa " , ¿te lo puedes creer?
+```
+
+Otra solución (más fácilmente legible) sería utilizar comillas dentro de la cadena que sean diferentes a las que estamos usando para abrir y cerrar la cadena, por ejemplo:
+
+```
+console.log (" ...y me dijo 'pues no vienes a casa', ¿te lo puedes creer?")
+```
+{% endhint %}
 {% endtab %}
 
 {% tab title="Booleano" %}
