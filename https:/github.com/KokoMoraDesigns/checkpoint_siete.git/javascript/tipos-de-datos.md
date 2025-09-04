@@ -54,13 +54,42 @@ Equivale a una **cadena de caracteres**, y debemos posicionarla entrecomillada, 
 {% endtab %}
 
 {% tab title="Booleano" %}
+De aquí solamente pueden salir dos tipos de valores: _**true**_**&#x20;o&#x20;**_**false.**_ Por ejemplo:
 
+&#x20;_`let socia = true;`_&#x20;
+
+A partir de este binarismo true-false sobre la condición de socia de la persona usuaria, derivaría una serie de codificación que definiría los privilegios si _socia = true._&#x20;
+
+Debido a su esencia, el booleano es un tipo de datos no solo útil, sino imprescindible, para los condicionales:
+
+```
+let nombre = 'Mónica'
+
+if nombre !== 'Mónica' {
+    return 'no eres la persona con la que quería hablar'
+} 
+```
+
+Es decir, si 'nombre igual a Mónica' no es verdad, envía este mensaje.
 {% endtab %}
 
 {% tab title="Nulo" %}
+El valor nulo representa un campo que está vacío o tiene un valor desconocido. Por ejemplo, si estamos llenando un formulario, pero decidimos dejar algunos campos, como la edad, sin responder, esos campos de nuestro formulario equivaldrían a _null_.
 
+```
+let edad = null;
+```
+
+Otro caso aparentemente similar (al no devolvernos ningún valor) sería el de _undefined_, salvo que este lo que nos estaría indicando es que hemos declarado una variable que no está asignada. Por ejemplo:
+
+```
+let edad;
+console.log(edad) --> el output sería undefined
+```
 {% endtab %}
 {% endtabs %}
+
+
 
 
 
