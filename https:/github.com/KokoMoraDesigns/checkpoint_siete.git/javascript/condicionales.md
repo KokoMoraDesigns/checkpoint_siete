@@ -39,12 +39,13 @@ porcentaje = 59 --> (este valor no sería una codificación rígida, pero para e
 nombre_del_proyecto = 'abrir mi librería'
 
 function buenosDias() {
-    if porcentaje < 50 {
+
+    if (porcentaje < 50) {
         return `Buenos días ${nombre}, ahora mismo nos queda trabajo por hacer (tenemos un ${porcentaje}%), ¡mucho ánimo para reunir ese dinero!`
-    } else if porcentaje >= 50 < 100 {
-        return `Buenos días ${nombre}, ¡muy bien! Ya hemos cumplido un ${porcentaje}% de nuestro objetivo, sigue así, ya estamos casi, casi en la meta.
+    } else if ( porcentaje >= 50 && porcentaje < 100 ) {
+        return `Buenos días ${nombre}, ¡muy bien! Ya hemos cumplido un ${porcentaje}% de nuestro objetivo, sigue así, ya estamos casi, casi en la meta.`
     } else {
-        return ,`Buenos días ${nombre}, ¡¡enhorabuena!! Ya no necesitas mi ayuda para ${nombre_del_proyecto}, disfrútalo mucho.`
+        return `Buenos días ${nombre}, ¡¡enhorabuena!! Ya no necesitas mi ayuda para ${nombre_del_proyecto}, disfrútalo mucho.`
     }
 }
         
@@ -96,9 +97,8 @@ let proyectos = ['filosofía', 'matemáticas', 'literatura']
 let fecha_limite = 9
 
 function alert() {
-
     if (proyectos) {
-        if(fecha_limite 7 > 15) {
+        if(fecha_limite > 7 && fecha_limite < 15) {
             return 'un capítulo no hará daño a nadie, pero recuerda que después es mejor que empieces con tu proyecto, ¿vale?'
             
         } else if (fecha_limite <= 7) {
@@ -130,7 +130,9 @@ Otra manera de simplificar nuestro código es mediante los <mark style="backgrou
 
 Por ejemplo:
 
-`let precio = (socia = true) ? "precio_con_descuento" : "precio_sin_descuento";`
+```
+let precio = socia ? "precio_con_descuento" : "precio_sin_descuento";
+```
 
 Si tenemos una librería con una app o web que muestre el catálogo de libros disponibles, así como su precio, en una sola línea tenemos la condicional que afectará al precio en que la persona compre el libro.
 
@@ -184,7 +186,7 @@ Por ejemplo:
 let dia = 'jueves'
 let estudios;
 
-switch (dia){
+switch (dia) {
 
     case 'lunes':
     estudios = 'filosofía';
@@ -199,7 +201,7 @@ switch (dia){
     break;
     
     case 'jueves':
-    estudios = 'codificación'
+    estudios = 'codificación';
     break;
     
     case 'viernes':
@@ -213,8 +215,9 @@ switch (dia){
     case 'domingo':
     estudios = 'música';
     break;
+}
     
-console.log('hoy me toca estudiar', calificacion);
+console.log(`hoy me toca estudiar ${estudios}`);
 
 ```
 
