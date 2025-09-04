@@ -124,6 +124,28 @@ Las mejores prácticas de programación siempre piden un código optimizado y f�
 
 </details>
 
+
+
+Otra manera de simplificar nuestro código es mediante los <mark style="background-color:$primary;">operadores ternarios.</mark> Un operador ternario consiste en una forma rápida de aplicar un condicional _if-else_ sencillo con un bloque de código reducido.
+
+Por ejemplo:
+
+`let precio = (socia = true) ? "precio_con_descuento" : "precio_sin_descuento";`
+
+Si tenemos una librería con una app o web que muestre el catálogo de libros disponibles, así como su precio, en una sola línea tenemos la condicional que afectará al precio en que la persona compre el libro.
+
+<details>
+
+<summary>Sintaxis básica</summary>
+
+```
+( condición ) ? código a ejecutar si la condición es true : código a ejecutar si la condición es false
+```
+
+</details>
+
+
+
 Por último, vamos a mirar los <mark style="background-color:$primary;">condicionales</mark> <mark style="background-color:$primary;"></mark>_<mark style="background-color:$primary;">switch</mark>_, idóneos para mantener el orden cuando tenemos un conjunto complejo de operadores lógicos o cuando el código a ejecutar es bastante extenso. Primero, observemos la siguiente imagen:
 
 <figure><img src="https://lh3.googleusercontent.com/-XUiZSpb-Kmp-oKMed--BpHCTIZzs-z4YvezXHI2Uyx94xTK43aZwNxhJz7mIXnu81qPqX-n3C1VA-PYVsGJGRwT0Q8mjRrP4i-GG5y9_sxUjLLnLeh8jtL3OjLxd60yAi1C7pV1Fl_Mx-m9b8WpCcHQ0XgyI9iF_7S23y5kTgkPCaffaPWu-iJaAIJjpb-4R38x98L8_5CsqSZZpmKlThdwZf9N2hRvomLGDf9E2DRbn5U3oOF1WC_-M3_R5C_mhiGHCMAWHkF2QKVOvq1XGAauo4VGeKPsXG7DeI-nZ1cUA3BRF3twW0_PCKujK1R3EvTbs2n06X9phVOmZKNrZoEoV8YxMZLrDF9pkbgsT9eyITunMMUo8XeIXFxYo37u3qYB0fxDTsQ1EZl2CTATxFarKfn7we9CLJOU48lF9HkOKRAjzL6-cQmklVdVwUnBHdz1g_3kAGD4uvKw51xs1l2ra3Wxs4UoET1nZPA5q1cNiU8S28fbC-FbFg7donjcY9vHDLeeWDoEflxht7Eegm0vuNa_dmvRD-HFkc3DsoEBFmZKsKOrnYJQqeC6EgJanzL_7GIFkYuqfE1ilK-fzJsYcyTpyelgegBsh_uYVC2zUG5yjc7x=w560-h391-no" alt=""><figcaption></figcaption></figure>

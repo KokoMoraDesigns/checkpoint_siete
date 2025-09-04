@@ -10,4 +10,3 @@
 * [Declaración de función VS expresión de función](javascript/declaracion-de-funcion-vs-expresion-de-funcion.md)
 * ['this'](javascript/this.md)
 * [Condicionales](javascript/condicionales.md)
-* [Operadores ternarios](javascript/operadores-ternarios.md)
