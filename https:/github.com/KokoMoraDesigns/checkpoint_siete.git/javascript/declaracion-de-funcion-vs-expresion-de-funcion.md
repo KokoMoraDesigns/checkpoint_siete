@@ -51,11 +51,24 @@ let variable = funcion() {
 
 
 
+
+
+{% hint style="info" %}
 Para desarrollar las diferencias entre ambas maneras de definir las funciones, así como en qué contexto es más útil una u otra, primero es aconsejable explicar en qué orden JavaScript ejecuta el código.&#x20;
 
-Pongamos una declaración de función:
+Debemos tener en cuenta que JavaScript **primero declara las funciones y las variables,** y **después les asigna sus valores**, ese es el orden en que opera su sistema (lo conocemos como hoisting), con lo que, si utilizamos variables declaradas con 'var', estas se inicializarán antes (sin sus valores, es decir, en modo _undefined)._
+
+
+
+
+
+Pongamos una **declaración de función**:
+
+
 
 ```
+alumnado(clase, media)
+
 var clase = "4a"
 
 var media = 9
@@ -63,20 +76,29 @@ var media = 9
 function alumnado(clase, media) {
   return `la clase ${clase} tiene una media de ${media}`
 }
+
+
+
 ```
 
-Y ahora, una expresión de función:
+Y ahora, una **expresión de función**:
+
+
 
 ```
+notaMedia(media);
+
+var media = 9
+
 var notaMedia = function (media) {
   console.log(`tienen una media de ${media}`)
 }
+
+
+
 ```
 
-{% hint style="info" %}
-Debemos tener en cuenta que JavaScript **primero declara las funciones y las variables,** y **después les asigna sus valores**, ese es el orden en que opera su sistema (lo conocemos como hoisting), con lo que, si utilizamos variables declaradas con 'var', estas se inicializarán antes (sin sus valores, es decir, en modo _undefined)._
-
-La interpretación gráfica sería:
+La interpretación gráfica del hoisting sería:
 
 
 
@@ -104,14 +126,69 @@ media = 9
 
 notaMedia = function(media) {
     console.log(`tienen una media de ${media}`)
+    
+
 ```
 
 
 
-En cambio, si utilizamos variables declaradas con let o const, no se van a inicializar al principio, con lo que, si&#x20;
+Como podemos ver, una misma línea de código _( var notaMedia = function (media) {  )_  se ejecuta en tiempos diferentes.
+
+
+
+Es decir:
+
+
+
+El **output de la declaración** será: "la clase undefined tiene una media de undefined".
+
+
+
+El **output de la expresión** será: Uncaught TypeError: notaMedia is not a function.
+
+
+
+En cambio, si utilizamos **variables declaradas con let o const**, no se van a inicializar al principio, con lo que, si llamamos a la función antes de que estén asignadas, el output será: Uncaught ReferenceError: Cannot access 'clase' before initialization.
+
+
 {% endhint %}
 
-Como podemos ver, una misma línea de código _( var notaMedia = function (media) {  )_  se ejecuta en tiempos diferentes.
+
+
+Y esto nos lleva, por fin, a las diferencias entre declaración y expresión de funciones.
+
+La primera: debido al hoisting, las <mark style="background-color:$info;">declaraciones de funciones se pueden ejecutar antes de ser definidas</mark>, mientras que <mark style="background-color:$info;">las expresiones no</mark>. Pongamos ahora un ejemplo sin asignaciones:
+
+```
+DECLARACIÓN DE FUNCIÓN:
+
+
+saludo();
+
+
+function saludo () {
+  console.log('buenos días, mi amor')
+}
+
+output --> "buenos días, mi amor"
+
+
+
+
+EXPRESIÓN DE FUNCIÓN:
+
+
+saludo();
+
+
+var saludo = function () {
+  console.log('buenos días, mi amor')
+}
+
+output --> Uncaught TypeError: saludo is not a function 
+
+
+```
 
 La diferencia entre ambas radica, por ende, en los siguientes aspectos:
 
