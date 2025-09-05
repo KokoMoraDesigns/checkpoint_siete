@@ -141,24 +141,22 @@ El output será --> undefined undefined tiene un id de undefined
 
 <summary>'this' en un detector de eventos</summary>
 
-En este contexto, 'this' hará referencia al elemento DOM que causó el evento. Para probarlo, añadamos a nuestra página el botón _probemos 'this'_:
+En este contexto, 'this' hará referencia al elemento DOM que causó el evento. Para probarlo, añadamos a nuestra página el botón _clickeame_:
+
+<figure><img src="../.gitbook/assets/javscript-this-output.png" alt=""><figcaption></figcaption></figure>
+
+Ahora creamos un detector de eventos cuando pulsemos el botón, del cual el output que deseamos obtener es el valor de 'this':
 
 ```
-<button id="pruebaThis">probemos 'this'</button>
-```
-
-Vamos a la consola del modo 'inspeccionar' y creamos un detector de eventos cuando pulsemos el botón, del cual el output que deseamos es el valor de 'this':
-
-```
-document.getElementById('pruebaThis').addEventListener('click', function() {
+document.getElementById('button').addEventListener('click', function() {
   console.log(this);
 })
 ```
 
-El output que obtendremos con esto será, como ya hemos dicho, el elemento que originó la activación del evento, es decir, nuestro botón _probemos 'this':_
+El output que obtendremos con esto será, como ya hemos dicho, el elemento que originó la activación del evento, es decir, nuestro botón _clickeame:_
 
 ```
-output --> <button id="pruebaThis">probemos 'this'</button>
+output --> <button id="button">Clickeame</button>
 ```
 
 </details>
