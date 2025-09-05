@@ -1,10 +1,8 @@
 # Table of contents
 
-* [Untitled](README.md)
-
 ## JavaScript
 
-* [JavaScript VS el mundo](javascript/javascript-vs-el-mundo.md)
+* [JavaScript VS el mundo](README.md)
 * [Tipos de datos](javascript/tipos-de-datos.md)
 * [Funciones de las cadenas](javascript/funciones-de-las-cadenas.md)
 * [Condicionales](javascript/condicionales.md)
