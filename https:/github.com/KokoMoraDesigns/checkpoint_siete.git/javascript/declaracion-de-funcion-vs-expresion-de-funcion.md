@@ -155,7 +155,7 @@ En cambio, si utilizamos **variables declaradas con let o const**, no se van a i
 
 
 
-Y esto nos lleva, por fin, a las diferencias entre declaración y expresión de funciones.
+Y esto nos lleva, por fin, a las **diferencias entre declaración y expresión de funciones**.
 
 La primera: debido al hoisting, las <mark style="background-color:$info;">declaraciones de funciones se pueden ejecutar antes de ser definidas</mark>, mientras que <mark style="background-color:$info;">las expresiones no</mark>. Pongamos ahora un ejemplo sin asignaciones:
 
@@ -172,6 +172,17 @@ function saludo () {
 
 output --> "buenos días, mi amor"
 
+
+o
+
+
+suma(5, 7)
+
+function suma(num_uno, num_dos) {
+  return num_uno + num_dos;
+}
+
+output --> 12
 
 
 
@@ -190,8 +201,14 @@ output --> Uncaught TypeError: saludo is not a function
 
 ```
 
-La diferencia entre ambas radica, por ende, en los siguientes aspectos:
+
+
+La segunda: si usamos una declaración de función es obligatorio <mark style="background-color:$info;">darle un nombre</mark> a la función ( _function saludo()_ ), mientras que, con una expresión de función, el nombre es un aspecto opcional, así que podemos usar una función anónima, es decir, una función sin nombre ( _var saludo = function ()_ ).
 
 
 
-* Una expresión de función puede ser anónima, es decir, no tenemos por qué darle un nombre
+La tercera: justo debido a la posibilidad de crear funciones anónimas, es <mark style="background-color:$info;">más difícil corregir los errores</mark> que deriven de una expresión de función (anónima) que los de una declaración de función. Esto se debe a que, si tenemos la posibilidad de poder ver los errores y su origen en la cola de ejecución, gastaremos mucho menos tiempo intentando acotar de dónde vienen y qué los ha creado, con lo que tendremos un flujo de trabajo más eficiente.
+
+
+
+Por todo ello, algunos casos en que sería conveniente hacer uso de una declaración de función es cuando deseas ejecutarla antes de ser definidas o cuando tienes intención de reciclarla a lo largo del programa, y algunos casos en que sería conveniente hacer uso de una expresión de función es, por ejemplo, cuando deseas pasarle esa función a otra función como un argumento.
